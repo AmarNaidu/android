@@ -14,20 +14,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center_vertical">
+            android:layout_height="50dp"
+            android:gravity="center">
 
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="6" />
+                android:layout_weight="5" />
 
             <Button
+                android:id="@+id/wish_list_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/wish_list_button"
-                android:id="@+id/wish_list_button" />
+                android:layout_weight="1"
+                android:text="@string/wish_list_button"/>
 
         </LinearLayout>
 

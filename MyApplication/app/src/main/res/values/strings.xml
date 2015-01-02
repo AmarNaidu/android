@@ -13,5 +13,7 @@
     <string name="wish_button">New Button</string>
     <string name="title_activity_wish_list">WishListActivity</string>
     <string name="wish_list_button"> + </string>
+    <string name="wishListItemTextView">Wish</string>
+    <string name="wishListDateTextView">date/time</string>
 
 </resources>
