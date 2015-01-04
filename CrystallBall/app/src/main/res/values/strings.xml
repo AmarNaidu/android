@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">CrystallBall</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="hello_world">The answer is YES</string>
+    <string name="text_view">New Text</string>
+    <string name="button">Enlighten me!</string>
+    <string name="crystalball">crystalball</string>
 
 </resources>
