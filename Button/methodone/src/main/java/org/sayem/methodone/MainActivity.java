@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 
-    Button button;
+    Button button, button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +18,24 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.button);
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(this);
         button.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
 
-        Log.d("Sayem", "Button was click");
+        switch (v.getId()){
+
+            case R.id.button:
+                Log.d("Sayem", "First button was click");
+                break;
+
+            case R.id.button2:
+                Log.d("Sayem", "Second button was click");
+                break;
+        }
     }
 }
