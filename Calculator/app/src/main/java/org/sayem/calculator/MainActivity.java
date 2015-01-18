@@ -1,4 +1,4 @@
-package org.sayem.app;
+package org.sayem.calculator;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
