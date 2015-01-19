@@ -1,19 +1,19 @@
 Resources for Android
 =======
 
-This repository contains Android code examples, exercises and tutorials for novice, intermediate and advanced developers.
+This repository contains Android sample apps, code examples, exercises and tutorials for developers.
 
-Over time, more and more examples will be uploaded here.
+Over time, more and more apps will be uploaded here.
 
-All code in this repository is to be considered public domain unless stated otherwise.  
+All apps in this repository is to be considered public domain unless stated otherwise.  
 
 ###Contributions
 
-If you have any code you would like to contribute to this repository, please feel free to open a pull request. Please keep the code pure Android so as not to detract from the learning experience.
+If you have any apps you would like to contribute to this repository, please feel free to open a pull request.
 
 ##Feedback
 
-Contributors to this repo would be very grateful to receive feedback! If you would like to praise or comment on any item, or the repo as a whole, please do so in the issue tracker. I'd love to hear what you think, so please take a moment to let me know.
+Contributors to this repo would be very grateful to receive feedback! If you would like to praise or comment on any apps, or the repo as a whole, please do so in the issue tracker. I'd love to hear what you think, so please take a moment to let me know.
 
 
 ##Contact
