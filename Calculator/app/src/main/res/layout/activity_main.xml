@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/large_text"
+        android:text="@string/enter_two_number"
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editText1"
         android:layout_marginTop="20dp"/>
 
     <EditText
@@ -34,14 +34,16 @@
         android:layout_height="wrap_content"
         android:background="#ff3f6b9f"
         android:paddingBottom="4dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <Button
             tools:ignore="ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plus"
-            android:id="@+id/button"
+            android:id="@+id/plus_button"
             android:layout_marginRight="4dp"
             android:layout_marginEnd="4dp"/>
 
@@ -51,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/minus"
 
-            android:id="@+id/button2"
+            android:id="@+id/minus_button"
             android:layout_marginRight="4dp"
             android:layout_marginEnd="4dp"/>
 
@@ -61,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/divide"
 
-            android:id="@+id/button3"
+            android:id="@+id/divide_button"
             android:layout_marginRight="4dp"
             android:layout_marginEnd="4dp"/>
 
@@ -70,11 +72,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/multiply"
-            android:id="@+id/button4"
+            android:id="@+id/multiply_button"
             android:layout_marginRight="4dp"
             android:layout_marginEnd="4dp"/>
 
     </TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/the_result"
+        android:id="@+id/result_button"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sub_total"
+        android:id="@+id/total_button"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 
 
 </TableLayout>
