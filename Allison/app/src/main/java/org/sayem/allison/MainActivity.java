@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -11,7 +13,13 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        RelativeLayout relativeLayout = new RelativeLayout(this);
+        Button button = new Button(this);
+
+        relativeLayout.addView(button);
+        setContentView(relativeLayout); // set screen as relativeLayout, including button
+
     }
 
 
