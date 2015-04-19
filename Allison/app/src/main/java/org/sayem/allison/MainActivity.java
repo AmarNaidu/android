@@ -1,4 +1,4 @@
-package org.sayem.myapplication;
+package org.sayem.allison;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

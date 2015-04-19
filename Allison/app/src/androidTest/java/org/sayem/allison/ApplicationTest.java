@@ -1,4 +1,4 @@
-package org.sayem.myapplication;
+package org.sayem.allison;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
