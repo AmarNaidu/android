@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">TempConverter</string>
-
     <string name="hello_world">Hello world!</string>
+
     <string name="action_settings">Settings</string>
     <string name="title_name">Temp Converter</string>
     <string name="temp_hint_text">Enter your temperature</string>
     <string name="celsius_button_title">C</string>
-    <string name="fahrenheit_button_title">F</string>
+    <string name="f_button_title">F</string>
+    <string name="textviewid">New Text</string>
 </resources>
