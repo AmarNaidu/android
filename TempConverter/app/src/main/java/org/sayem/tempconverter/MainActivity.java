@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    // 6:39
     private EditText tempEditText;
     private Button celButton;
     private Button fButton;
@@ -31,6 +33,16 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
+                // Convert to Celsius
+                String editTextVal = tempEditText.getText().toString();
+                if (editTextVal.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
+                }else {
+                    int intEditText = Integer.parseInt(editTextVal);
+                    convertToCelsius(intEditText);
+                }
+
+
             }
         });
 
@@ -38,9 +50,26 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
+                // Convert to Fahrenheit
+                String editTextVal = tempEditText.getText().toString();
+                if (editTextVal.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
+                }else {
+                    int intEditText = Integer.parseInt(editTextVal);
+                    convertToFahrenheit(intEditText);
+                }
+
             }
         });
 
+    }
+
+    public int convertToCelsius(int farVal){
+        return 0;
+    }
+
+    public int convertToFahrenheit(int celVal){
+        return 0;
     }
 
 
