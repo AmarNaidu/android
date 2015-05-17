@@ -27,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
         tempEditText = (EditText) findViewById(R.id.editText);
         celButton = (Button) findViewById(R.id.cButton);
         fButton = (Button) findViewById(R.id.fButton);
-        showTempTextView = (TextView) findViewById(R.id.titleView);
+        showTempTextView = (TextView) findViewById(R.id.showResultTextView);
 
         celButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
                 if (editTextVal.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
                 }else {
-                    int intEditText = Integer.parseInt(editTextVal);
+                    double intEditText = Double.parseDouble(editTextVal);
                     convertToCelsius(intEditText);
                 }
 
@@ -55,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
                 if (editTextVal.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
                 }else {
-                    int intEditText = Integer.parseInt(editTextVal);
+                    double intEditText = Double.parseDouble(editTextVal);
                     convertToFahrenheit(intEditText);
                 }
 
@@ -64,11 +64,11 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public int convertToCelsius(int farVal){
+    public double convertToCelsius(double farVal){
         return 0;
     }
 
-    public int convertToFahrenheit(int celVal){
+    public double convertToFahrenheit(double celVal){
         return 0;
     }
 
