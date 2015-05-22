@@ -39,10 +39,11 @@ public class MainActivity extends ActionBarActivity {
                     Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
                 }else {
                     double intEditText = Double.parseDouble(editTextVal);
-                    convertToCelsius(intEditText);
+                    double convertedVal = convertToCelsius(intEditText);
+
+                    String result = String.valueOf(convertedVal);
+                    showTempTextView.setText(result);
                 }
-
-
             }
         });
 
@@ -65,14 +66,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public double convertToCelsius(double farVal){
-        return 0;
+        return (farVal - 32) * 5/9;
     }
 
     public double convertToFahrenheit(double celVal){
-        return 0;
+        return (celVal * 9/5) + 32;
     }
-
-
 
 
 
