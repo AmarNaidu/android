@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -28,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
         celButton = (Button) findViewById(R.id.cButton);
         fButton = (Button) findViewById(R.id.fButton);
         showTempTextView = (TextView) findViewById(R.id.showResultTextView);
+        final DecimalFormat round = new DecimalFormat("0.0");
 
         celButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +44,8 @@ public class MainActivity extends ActionBarActivity {
                     double intEditText = Double.parseDouble(editTextVal);
                     double convertedVal = convertToCelsius(intEditText);
 
-                    String result = String.valueOf(convertedVal);
-                    showTempTextView.setText(result);
+                    String result = String.valueOf(round.format(convertedVal));
+                    showTempTextView.setText(result + " C");
                 }
             }
         });
@@ -56,8 +59,11 @@ public class MainActivity extends ActionBarActivity {
                 if (editTextVal.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Enter a Value", Toast.LENGTH_LONG).show();
                 }else {
-                    double intEditText = Double.parseDouble(editTextVal);
-                    convertToFahrenheit(intEditText);
+                    double doubleEditText = Double.parseDouble(editTextVal);
+                    double convertedVal = convertToFahrenheit(doubleEditText);
+
+                    String result = String.valueOf(round.format(convertedVal));
+                    showTempTextView.setText(result + " F");
                 }
 
             }

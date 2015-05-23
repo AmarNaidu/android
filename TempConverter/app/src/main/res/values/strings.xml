@@ -7,5 +7,5 @@
     <string name="temp_hint_text">Enter your temperature</string>
     <string name="celsius_button_title">C</string>
     <string name="f_button_title">F</string>
-    <string name="showResultTextView">New Text</string>
+    <string name="showResultTextView">""</string>
 </resources>
