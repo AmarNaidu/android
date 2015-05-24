@@ -1,39 +1,17 @@
-package org.sayem.imageviews;
+package org.sayem.uiviewsxml;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
-
-    private ImageView appleImage;
-    private TextView showTextView;
-    private static final String TAG = "logger";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        appleImage = (ImageView) findViewById(R.id.airdroid_image);
-        showTextView = (TextView) findViewById(R.id.image_name);
-
-        appleImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showTextView.setText("Airdroid is good");
-
-                Log.d(TAG, "Hello from here!");
-                Log.v(TAG, "Another hello!");
-            }
-        });
     }
 
     @Override
