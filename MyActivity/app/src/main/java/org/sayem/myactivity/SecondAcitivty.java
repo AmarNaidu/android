@@ -1,17 +1,53 @@
 package org.sayem.myactivity;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class SecondAcitivty extends ActionBarActivity {
+
+
+    private TextView myTextView;
+    private Button goBackButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_acitivty);
+
+
+        myTextView = (TextView) findViewById(R.id.textView);
+        goBackButton = (Button) findViewById(R.id.second_button);
+
+
+        Bundle extras = getIntent().getExtras();
+
+        if (extras != null){
+            String myString = extras.getString("ActivityOne");
+            myTextView.setText(myString);
+        }
+
+        goBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent returnIntent = getIntent();
+                returnIntent.putExtra("returnData", "From SecondActivity");
+                returnIntent.putExtra("somethingElse", "This is something else");
+                setResult(RESULT_OK, returnIntent);
+                finish();
+
+
+            }
+        });
+
+
     }
 
     @Override

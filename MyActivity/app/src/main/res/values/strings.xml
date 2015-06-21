@@ -6,4 +6,5 @@
     <string name="title_activity_second_acitivty">SecondAcitivty</string>
     <string name="main_activity_button">Go to second activity</string>
     <string name="second_view_text">I am the second activity</string>
+    <string name="back_button">Go Back!</string>
 </resources>
