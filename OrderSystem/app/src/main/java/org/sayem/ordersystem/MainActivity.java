@@ -12,6 +12,8 @@ import java.text.NumberFormat;
  */
 public class MainActivity extends ActionBarActivity {
 
+    int quantity = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +24,9 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 5;
-        display(quantity);
-        displayPrice(quantity * 5);
+        int price = quantity * 5;
+        String priceMessage = "Total: $" + price;
+        displayMessage(priceMessage);
     }
 
     /**
@@ -44,14 +46,26 @@ public class MainActivity extends ActionBarActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
-    public void increment(View view){
-        int quantity = 3;
-        display(quantity);
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
-    public void decrement(View view){
 
-        int quantity = 1;
+    public void increment(View view) {
+        quantity = quantity + 1;
         display(quantity);
+
+    }
+
+    public void decrement(View view) {
+        if (quantity >= 1) {
+            quantity = quantity - 1;
+            display(quantity);
+        }
     }
 }
