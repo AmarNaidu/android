@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuanity(int number) {
         TextView quantityTextView = (TextView) findViewById(
                 R.id.quantity_text_view);
         quantityTextView.setText("" + number);
@@ -58,14 +58,14 @@ public class MainActivity extends ActionBarActivity {
 
     public void increment(View view) {
         quantity = quantity + 1;
-        display(quantity);
+        displayQuanity(quantity);
 
     }
 
     public void decrement(View view) {
         if (quantity >= 1) {
             quantity = quantity - 1;
-            display(quantity);
+            displayQuanity(quantity);
         }
     }
 }
