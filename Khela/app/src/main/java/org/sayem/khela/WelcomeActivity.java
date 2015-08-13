@@ -1,13 +1,18 @@
 package org.sayem.khela;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,32 @@ public class WelcomeActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_welcome);
+
+        final Button startButton = (Button) findViewById(R.id.androidButton);
+
+        startButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startButton.getBackground().setAlpha(100);
+
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        Intent intent = new Intent(WelcomeActivity.this, GameActivity.class);
+                        startActivity(intent);
+                        startButton.getBackground().setAlpha(255);
+
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+
+                        break;
+
+                }
+                return false;
+            }
+        });
+
     }
 
     @Override
