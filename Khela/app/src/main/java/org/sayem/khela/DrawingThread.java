@@ -2,6 +2,7 @@ package org.sayem.khela;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.view.Display;
@@ -34,6 +35,8 @@ public class DrawingThread extends Thread{
         
         displayX = displayDimension.x;
         displayY = displayDimension.y;
+
+        backgroundBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.background);
     }
 
     @Override
