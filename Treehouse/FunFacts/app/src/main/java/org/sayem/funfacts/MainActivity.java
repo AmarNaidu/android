@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +14,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Declare our View variables
+        final TextView factLabel = (TextView) findViewById(R.id.factTextView);
+        Button showFactButton = (Button) findViewById(R.id.showFactButton);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // The button was clicked, so update the fact label with a new fact.
+                String fact = "";
+                // Randomly select a fat
+
+
+
+                // Update the label with our dynamic fact
+                factLabel.setText(fact);
+            }
+        };
+        showFactButton.setOnClickListener(listener);
+
     }
 
     @Override
