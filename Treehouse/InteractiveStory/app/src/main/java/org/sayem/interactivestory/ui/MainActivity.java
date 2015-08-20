@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText mNameField;
     private Button mStartButton;
-    private int l = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
         mNameField = (EditText)findViewById(R.id.nameEditText);
         mStartButton = (Button)findViewById(R.id.startButton);
-        mNameField.setText(l);
 
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = String.valueOf(l);
+                String name = mNameField.getText().toString();
                 startStory(name);
             }
         });
