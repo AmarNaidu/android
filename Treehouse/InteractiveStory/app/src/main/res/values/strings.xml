@@ -6,4 +6,6 @@
     <string name="content_description">Singals from Mars</string>
     <string name="title_activity_store">StoreActivity</string>
     <string name="title_activity_store_acitivty">StoreAcitivty</string>
+    <string name="key_name">name</string>
+    <string name="storyImageView">You continue your course to Earth. Two days later, you receive a transmission from HQ saying that they have detected some sort of anomaly on the surface of Mars near an abandoned rover. They ask you to investigate, but ultimately the decision is yours because your mission has already run much longer than planned and supplies are low.</string>
 </resources>
