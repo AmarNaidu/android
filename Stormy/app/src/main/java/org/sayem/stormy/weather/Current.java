@@ -1,4 +1,6 @@
-package org.sayem.stormy;
+package org.sayem.stormy.weather;
+
+import org.sayem.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +9,7 @@ import java.util.TimeZone;
 /**
  * Created by syed.sayem on 8/20/15.
  */
-public class CurrentWeather {
+public class Current {
 
     private String mIcon;
     private long mTime;
