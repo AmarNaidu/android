@@ -11,19 +11,17 @@ import org.sayem.stormy.R;
 /**
  * Created by syed.sayem on 8/20/15.
  */
-public class AlertDialogFragment  extends DialogFragment{
+public class AlertDialogFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
         Context context = getActivity();
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
-                .setTitle(context.getResources().getString(R.string.error_title))
-                .setMessage(context.getResources().getString(R.string.error_message))
-                .setPositiveButton(context.getResources().getString(R.string.error_ok_button), null);
+                .setTitle(context.getString(R.string.error_title))
+                .setMessage(context.getString(R.string.error_message))
+                .setPositiveButton(context.getString(R.string.error_ok_button), null);
 
         AlertDialog dialog = builder.create();
         return dialog;
-
     }
 }

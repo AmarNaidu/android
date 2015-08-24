@@ -14,7 +14,7 @@ import org.sayem.stormy.weather.Day;
 /**
  * Created by syed.sayem on 8/23/15.
  */
-public class DayAdapter  extends BaseAdapter{
+public class DayAdapter extends BaseAdapter {
 
     private Context mContext;
     private Day[] mDays;
@@ -43,7 +43,7 @@ public class DayAdapter  extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
 
-        if (convertView == null){
+        if (convertView == null) {
             // brand new
             convertView = LayoutInflater.from(mContext).inflate(R.layout.daily_list_item, null);
             holder = new ViewHolder();
@@ -52,23 +52,28 @@ public class DayAdapter  extends BaseAdapter{
             holder.dayLabel = (TextView) convertView.findViewById(R.id.dayNameLabel);
 
             convertView.setTag(holder);
-        }else {
+        }
+        else {
             holder = (ViewHolder) convertView.getTag();
         }
 
         Day day = mDays[position];
+
         holder.iconImageView.setImageResource(day.getIconId());
         holder.temperatureLabel.setText(day.getTemperatureMax() + "");
-        holder.dayLabel.setText(day.getDayOfTheWeek());
+
+        if (position == 0){
+            holder.dayLabel.setText("Today");
+        }else {
+            holder.dayLabel.setText(day.getDayOfTheWeek());
+        }
 
         return convertView;
     }
 
-    private static class ViewHolder{
-
-        ImageView iconImageView;
+    private static class ViewHolder {
+        ImageView iconImageView; // public by default
         TextView temperatureLabel;
         TextView dayLabel;
-
     }
 }
