@@ -39,13 +39,13 @@ public class SignUpActivity extends AppCompatActivity {
 
                 if (username.isEmpty() || password.isEmpty() || email.isEmpty()) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this)
-                            .setMessage(R.string.signup_error_message)
-                            .setTitle(R.string.signup_error_title)
+                            .setMessage(R.string.login_error_message)
+                            .setTitle(R.string.login_error_title)
                             .setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 } else {
-
+                    // Login
                 }
             }
         });
