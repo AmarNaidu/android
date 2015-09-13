@@ -1,15 +1,11 @@
 package org.sayem.ribbit;
 
-/**
- * Created by syed.sayem on 9/7/15.
- */
+import java.util.Locale;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import java.util.Locale;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -19,7 +15,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     protected Context mContext;
 
-
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
@@ -28,20 +23,21 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
+        // Return a DummySectionFragment (defined as a static inner class
+        // below) with the page number as its lone argument.
 
-        switch (position) {
+        switch(position) {
             case 0:
                 return new InboxFragment();
             case 1:
                 return new FriendsFragment();
         }
+
         return null;
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
         return 2;
     }
 

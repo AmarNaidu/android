@@ -9,7 +9,7 @@ import com.parse.ParseUser;
 /**
  * Created by syed.sayem on 8/26/15.
  */
-public class RibiitApplication extends Application {
+public class RibbitApplication extends Application {
 
     @Override
     public void onCreate() {

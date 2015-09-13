@@ -1,11 +1,10 @@
 package org.sayem.ribbit;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -15,9 +14,9 @@ import android.widget.TextView;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
+
     protected EditText mUsername;
     protected EditText mPassword;
     protected Button mLoginButton;
@@ -26,9 +25,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_login);
 
         mSignUpTextView = (TextView)findViewById(R.id.signUpText);
@@ -63,11 +61,12 @@ public class LoginActivity extends AppCompatActivity {
                 else {
                     // Login
                     setProgressBarIndeterminateVisibility(true);
-                    ParseUser.logInInBackground(username, password, new LogInCallback() {
 
+                    ParseUser.logInInBackground(username, password, new LogInCallback() {
                         @Override
                         public void done(ParseUser user, ParseException e) {
                             setProgressBarIndeterminateVisibility(false);
+
                             if (e == null) {
                                 // Success!
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -93,7 +92,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sign_up, menu);
+        getMenuInflater().inflate(R.menu.menu_login, menu);
         return true;
     }
+
 }
