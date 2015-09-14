@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 public class EditFriendsActivity extends ListActivity {
@@ -24,6 +25,9 @@ public class EditFriendsActivity extends ListActivity {
     public static final String TAG = EditFriendsActivity.class.getSimpleName();
 
     protected List<ParseUser> mUsers;
+    protected ParseRelation<ParseUser> mFriendsRelation;
+    protected ParseUser mCurrentUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,9 @@ public class EditFriendsActivity extends ListActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        mCurrentUser = ParseUser.getCurrentUser();
+        mFriendsRelation = mCurrentUser.getRelation(ParseConstants.KEY_FRIEND_RELATION);
 
         setProgressBarIndeterminateVisibility(true);
 
@@ -114,5 +121,7 @@ public class EditFriendsActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
+
     }
 }
+
