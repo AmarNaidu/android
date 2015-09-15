@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AlertDialogs</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="show_title">Show Dialog</string>
+    <string name="dialoge_title">My Dialog </string>
+    <string name="dialog_message">Hello I am your Dialog</string>
+
+
+</resources>
