@@ -6,6 +6,7 @@
     <string name="show_title">Show Dialog</string>
     <string name="dialoge_title">My Dialog </string>
     <string name="dialog_message">Hello I am your Dialog</string>
-
+    <string name="positive_button">Yes</string>
+    <string name="negative_button">No</string>
 
 </resources>

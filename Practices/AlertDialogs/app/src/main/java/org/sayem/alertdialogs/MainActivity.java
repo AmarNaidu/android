@@ -2,6 +2,7 @@ package org.sayem.alertdialogs;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,9 +26,36 @@ public class MainActivity extends Activity {
 
                 dialog = new AlertDialog.Builder(MainActivity.this);
 
-                dialog.setTitle("Title");
+                dialog.setTitle(getResources().getString(R.string.dialoge_title));
+                dialog.setMessage(getResources().getString(R.string.dialog_message));
+
+                dialog.setCancelable(false);
+
+                // set Positive button
+                dialog.setPositiveButton(getResources().getString(R.string.positive_button),
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // exist
+                                MainActivity.this.finish();
+                            }
+                        });
+
+                dialog.setNegativeButton(getResources().getString(R.string.negative_button),
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // dialog cancel
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alertD = dialog.create();
+                alertD.show();
             }
         });
+
+
     }
 
 }
