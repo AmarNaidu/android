@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
 
                 dialog.setCancelable(false);
 
+                dialog.setIcon(android.R.drawable.btn_star);
+
                 // set Positive button
                 dialog.setPositiveButton(getResources().getString(R.string.positive_button),
                         new DialogInterface.OnClickListener() {
