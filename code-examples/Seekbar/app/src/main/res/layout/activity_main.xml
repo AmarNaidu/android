@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/nice_text"
-        android:id="@+id/textView2"
+        android:id="@+id/nicenessTextView"
         android:layout_below="@+id/seekBar"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>
