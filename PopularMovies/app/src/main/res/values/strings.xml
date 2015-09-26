@@ -3,4 +3,18 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="movies">
+        <item>300</item>
+        <item>americangangster</item>
+        <item>bladerunner</item>
+        <item>happygilmore</item>
+        <item>hugo</item>
+        <item>hulk</item>
+        <item>Inception</item>
+        <item>pursuitofhappyness</item>
+        <item>reception</item>
+        <item>skyfall</item>
+        <item>twilight</item>
+        <item>worldwarz</item>
+    </string-array>
 </resources>
